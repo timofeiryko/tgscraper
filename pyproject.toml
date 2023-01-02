@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "tgscraper"
+version = "0.1.0"
+description = "Demo version of a package for easy telegram scraping"
+authors = ["Timofei Ryko <timofei.ryko@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^1.10.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

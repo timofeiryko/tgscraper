@@ -1,0 +1,9 @@
+[telegram]
+# api_id = ID HERE (int)
+# api_hash = HASH HERE (str)
+# phone = PHONE HERE (str)
+# username = USERNAME HERE (str)
+
+[input]
+channels = ["https://t.me/svtvnews"]
+# You can include multiple channels here
