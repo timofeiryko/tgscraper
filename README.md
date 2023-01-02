@@ -51,15 +51,15 @@ Alternatively, you can use `poetry shell` to enter the virtual environment and r
 After pip installing the package, you can use it in your code like this:
 
 ```python
-from tgscraper import init, get_posts
+from tgscraper import tgscraper
 import pandas as pd
 
 # Client a Telegram client
-client = init()
+client = tgscraper.init()
 # Be aware that you can be prompted to enter your phone number and a code, sent to your Telegram account
 
 # Get the posts from the channel into a pandas DataFrame
-posts_df = await get_posts(client, link, limit=100)
+posts_df = tgscraper.get_posts(client, link, limit=100)
 
 # Do something with the data
 posts_df.to_csv("posts.csv")
