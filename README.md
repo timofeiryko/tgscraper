@@ -6,13 +6,59 @@ It can be used as a CLI tool (saves scraped data to a CSV file) or as a Python p
 
 ## Installation
 
+### Install to run as a CLI tool
+
+To use it as a CLI, ptobably the best way to install tgscraper is just to clone this repository and run it from there. We use Poetry to manage dependencies and Python version. To install Poetry, follow the instructions [here](https://python-poetry.org/docs/#installation). After that, run the following commands in the root directory of the project:
+
 ```bash
+poetry install
+poetry add tgscraper
+```
+
+**To run tgscraper as a script, you need Python 3.11 installed** (otherwise, Poetry will probably fail to create an environment).
+
+Alternatively, you can install dependencies into you own environment without Poetry, using `requirements.txt` file (it can be found in this repository):
+
+```bash
+pip install -r requirements.txt
 pip install tgscraper
 ```
 
-To use it as a CLI, ptobably the best way to install tgscraper is just to clone this repository and run it from there. We use Poetry to manage dependencies and Python version. To install Poetry, follow the instructions [here](https://python-poetry.org/docs/#installation).
+### Install to use in your code
 
-To run tgscraper as a script, you need Python 3.11 installed (otherwise, Poetry will probably fail to create an environment).
+#### For poetry
+
+If you use Poetry, just include the dependencies in your `pyproject.toml` file:
+
+```toml
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^1.10.4"
+telethon = "^1.26.1"
+pandas = "^1.5.2"
+```
+
+Make sure that you don't have any conflicts with the versions of the dependencies.
+
+Then, add tgscraper to your project and install it:
+
+```bash
+poetry add tgscraper
+poetry install
+```
+
+#### For other environment managers
+
+If you use other environment managers, you can install tgscraper using pip:
+
+```bash
+pip install -r requirements.txt
+pip install tgscraper
+```
+
+#### Python version
+
+**To use tgscraper in your code, you need Python 3.11 in the environment that you use.**
 
 ## Usage
 
